@@ -1,0 +1,375 @@
+body {
+    background-color: #7ff4a6;
+    height: 300vh;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #adffb6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navbar-brand {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: antiquewhite;
+}
+
+.navbar {
+    position: fixed;
+    text-align: center;
+    align-content: center;
+    z-index: 1;
+ 
+}
+
+.row {
+    z-index: -1;
+}
+
+#firstRow {
+    margin-top: 10%;
+    
+}
+
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.sideMenu {
+    margin-top: 20vh;
+    font-size: 5em;
+    color: #5efff9;
+    text-shadow: -7px 4px #ddbff2;
+}
+
+.audioText {
+    margin-top: 15vh;
+    text-align: center;
+    font-size: 8em;
+    color: white;
+    text-shadow: -7px 4px #ddbff2;
+}
+
+.item h1 {
+  text-align: center;
+    font-size: 8em;
+    color: #5efff9;
+    text-shadow: -7px 4px yellow;
+
+}
+
+/*Spinning Text*/
+
+#spinner {
+  animation-name: spinner, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  transform-style: preserve-3d;
+  text-align:center;
+}
+@keyframes spinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+@keyframes depth {
+  0% { text-shadow: 0 0 #5efff9; }
+  25% { text-shadow: -17px 14px #ddbff2, -15px 14px #ddbff2, -14px 14px #ddbff2, -13px 14px #ddbff2, -12px 14px #ddbff2; }
+  50% { text-shadow: 0 0 #5efff9; }
+  75% { text-shadow: 17px -14px #ddbff2, 16px -14px #ddbff2, 15px -14px #ddbff2, 14px -14px #ddbff2, 13px -14px #ddbff2; }
+  100% { text-shadow: 0 0 #5efff9; }
+}
+
+
+
+
+
+/*Masonry Grid*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+.masonry { /* Masonry container */
+    column-count: 4;
+    column-gap: 1em;
+}
+
+.item { /* Masonry bricks or child elements */
+    background-color: #7ff4a6;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+    text-align: center;
+}
+
+/* The Masonry Container */
+.masonry {
+  margin: 1.5em auto;
+  max-width: 100%;
+  column-gap: 1.5em;
+}
+
+/* The Masonry Brick */
+.item {
+  background: #7ff4a6;
+  padding: 1em;
+  margin: 0 0 1.5em;
+}
+
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px){
+  .masonry {
+    column-count: 1;
+    /*display: none;*/
+  }
+}
+
+#mainGlitch {
+  color: #ddbff2;
+  margin: 5% auto;
+  text-shadow: -8px 10px #fff199;
+
+}
+
+
+@media only screen and (max-width: 1500px) and (min-width: 768px) {
+  #mainGlitch {
+    margin: 5% auto;
+    font-size: 5em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #mainGlitch {
+    margin:auto;
+    font-size: 1em;
+  }
+}
+
+
+/*Glitch Effect*/
+
+ .glitch {
+  position: relative;
+
+  margin: 35% auto;
+  color: #ddbff2;
+  font-size: 10em;
+  font-family: "Exo", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background: #fff199 ;
+  color: #ddbff2;
+  clip: rect(0, 900px, 0, 0);
+}
+.glitch::before {
+  left: 700px;
+  text-shadow: 10px 0 #bfebf1;
+  animation: glitch-effect 1s infinite linear alternate-reverse;
+}
+.glitch::after {
+  right: 30px;
+  text-shadow: -10px 0 #ffadd8;
+  animation: glitch-effect 1s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes glitch-effect {
+  0% {
+    clip: rect(57px, 9999px, 60px, 0);
+  }
+  5% {
+    clip: rect(16px, 9999px, 12px, 0);
+  }
+  10% {
+    clip: rect(87px, 9999px, 71px, 0);
+  }
+  15% {
+    clip: rect(61px, 9999px, 56px, 0);
+  }
+  20% {
+    clip: rect(49px, 9999px, 18px, 0);
+  }
+  25% {
+    clip: rect(4px, 9999px, 73px, 0);
+  }
+  30% {
+    clip: rect(84px, 9999px, 100px, 0);
+  }
+  35% {
+    clip: rect(95px, 9999px, 7px, 0);
+  }
+  40% {
+    clip: rect(62px, 9999px, 29px, 0);
+  }
+  45% {
+    clip: rect(11px, 9999px, 99px, 0);
+  }
+  50% {
+    clip: rect(25px, 9999px, 52px, 0);
+  }
+  55% {
+    clip: rect(97px, 9999px, 68px, 0);
+  }
+  60% {
+    clip: rect(34px, 9999px, 16px, 0);
+  }
+  65% {
+    clip: rect(89px, 9999px, 26px, 0);
+  }
+  70% {
+    clip: rect(16px, 9999px, 37px, 0);
+  }
+  75% {
+    clip: rect(56px, 9999px, 24px, 0);
+  }
+  80% {
+    clip: rect(2px, 9999px, 76px, 0);
+  }
+  85% {
+    clip: rect(59px, 9999px, 1px, 0);
+  }
+  90% {
+    clip: rect(4px, 9999px, 69px, 0);
+  }
+  95% {
+    clip: rect(79px, 9999px, 44px, 0);
+  }
+  100% {
+    clip: rect(92px, 9999px, 74px, 0);
+  }
+}
+
+@keyframes glitch-effect {
+  0% {
+    clip: rect(57px, 9999px, 60px, 0);
+  }
+  5% {
+    clip: rect(16px, 9999px, 12px, 0);
+  }
+  10% {
+    clip: rect(87px, 9999px, 71px, 0);
+  }
+  15% {
+    clip: rect(61px, 9999px, 56px, 0);
+  }
+  20% {
+    clip: rect(49px, 9999px, 18px, 0);
+  }
+  25% {
+    clip: rect(4px, 9999px, 73px, 0);
+  }
+  30% {
+    clip: rect(84px, 9999px, 100px, 0);
+  }
+  35% {
+    clip: rect(95px, 9999px, 7px, 0);
+  }
+  40% {
+    clip: rect(62px, 9999px, 29px, 0);
+  }
+  45% {
+    clip: rect(11px, 9999px, 99px, 0);
+  }
+  50% {
+    clip: rect(25px, 9999px, 52px, 0);
+  }
+  55% {
+    clip: rect(97px, 9999px, 68px, 0);
+  }
+  60% {
+    clip: rect(34px, 9999px, 16px, 0);
+  }
+  65% {
+    clip: rect(89px, 9999px, 26px, 0);
+  }
+  70% {
+    clip: rect(16px, 9999px, 37px, 0);
+  }
+  75% {
+    clip: rect(56px, 9999px, 24px, 0);
+  }
+  80% {
+    clip: rect(2px, 9999px, 76px, 0);
+  }
+  85% {
+    clip: rect(59px, 9999px, 1px, 0);
+  }
+  90% {
+    clip: rect(4px, 9999px, 69px, 0);
+  }
+  95% {
+    clip: rect(79px, 9999px, 44px, 0);
+  }
+  100% {
+    clip: rect(92px, 9999px, 74px, 0);
+  }
+}
+
+.glitch a:hover {
+  color: #adffb6;
+}
+
+
+
+
+
+
+
+/*IDS*/
+
+#sidebar {
+    position: fixed;
+    height: 100%;
+    /*width: 20%;*/
+    background-color: #7ff4a6;
+}
