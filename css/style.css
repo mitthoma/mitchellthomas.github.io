@@ -1,6 +1,7 @@
 body {
-    background-color: black;
+    background-color: #e7e7e7;
     height: 300vh;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -8,11 +9,17 @@ a {
 }
 
 a:hover {
-  color: #adffb6;
+  color: white;
+  text-decoration: line-through;
 }
 
 ul {
   list-style-type: none;
+}
+
+#backButton {
+  margin-top: 10vh;
+  margin-bottom: -10vh;
 }
 
 
@@ -29,6 +36,8 @@ ul {
     text-align: center;
     align-content: center;
     z-index: 1;
+    overflow: visible;
+    height: 0px;
  
 }
 
@@ -41,6 +50,23 @@ ul {
     margin-left: 25%;
 }
 
+#title {
+  position: relative;
+  /*margin: 60% auto;*/
+  /*color: lightslategray;*/
+  color: inherit;
+  font-size: 10em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  /*z-index: 1;*/
+  float: left;
+  margin-top: 60vh;
+  text-align: left;
+}
+
 
 img {
   height: auto;
@@ -51,7 +77,7 @@ img {
     margin-top: 20vh;
     font-size: 5em;
     color: #7ff4a6;
-    text-shadow: -7px 4px #ddbff2;
+    /*text-shadow: -4px 2px #ddbff2;*/
 }
 
 .audioDiv {
@@ -75,50 +101,25 @@ img {
 
 #titleText {
   margin-top: 25%;
-  margin-bottom: -30%;
-
-}
-
-/*Photos Page*/
-
-.photoTitles {
+  margin-bottom: -10%;
   color: white;
-  font-size: 8em;
-  margin-top: -15%;
-}
-
-.photoItem {
-  /*background: url("../iceland1.jpg");*/
-  background-size: 100%;
-  padding: 1em;
-  margin: 0 0 1.5em;
-  /*padding-top: 25vh;
-  padding-bottom: 25vh;*/
-  text-align: center;
-  
-}
-
-.photoItem h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
   font-size: 3em;
-  color: #7ff4a6;
-  text-shadow: -4px 0px #ddbff2;
-  z-index: 10;
-
-  
-}
-
-.photoSideBar {
-  margin-top: 20%;
-  color: #ddbff2;
- 
-}
-
-.photoSideBar img {
-  height: auto;
-  width: 40%;
 
 }
 
+#enter {
+  position: relative;
+  margin: 35% auto;
+  color: white;
+  /*text-shadow: -1px 2px white;*/
+  font-size: 4em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 
 /*Masonry Grid*/
@@ -137,6 +138,9 @@ html {
 .masonry { /* Masonry container */
     column-count: 4;
     column-gap: 1em;
+    font-family: 'Inconsolata', monospace;
+
+
     
 }
 
@@ -145,21 +149,60 @@ html {
     display: inline-block;
     margin: 0 0 1em;
     width: 100%;
+    text-align: right;
 }
 
 /* The Masonry Container */
 .masonry {
   margin: 1.5em auto;
-  max-width: 100%;
+  max-width: 80%;
   column-gap: 1.5em;
+
 }
 
 /* The Masonry Brick */
 .item {
-  background: black;
+  background: #e7e7e7;
   padding: 1em;
   margin: 0 0 1.5em;
+  padding-left: 10vh;
+  /*text-align: right;*/
 }
+
+.workHeader {
+  background: #e7e7e7;
+  padding: 1em;
+  margin: 0 0 1.5em;
+  padding-left: 10vh;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 6em;
+  margin-bottom: -2%;
+}
+
+.workItem {
+  background-color: #e1e1e1;
+  padding: 1em;
+  margin: 0 0 1.5em;
+  padding-left: 10vh;
+  height: 100%;
+  width: 100%;
+  text-align: right;
+  color: inherit;
+}
+
+.workItem h1 {
+  font-size: 2em;
+}
+
+.workItem h1:hover {
+  color: white;
+  text-decoration: line-through;
+}
+
+
+
 
 /* Masonry on large screens */
 @media only screen and (min-width: 1024px) {
@@ -184,9 +227,17 @@ html {
 }
 
 #mainGlitch {
-  color: #ddbff2;
+  color: white;
   margin: 5% auto;
-  text-shadow: -8px 10px #fff199;
+  text-shadow: -4px 7px white;
+
+}
+
+#sideGlitch {
+  color: black;
+  margin: 0 auto;
+  /*text-shadow: -4px 7px white;*/
+
 
 }
 
@@ -208,13 +259,45 @@ html {
 
 /*Glitch Effect*/
 
+
+.sideGlitch {
+  position: relative;
+  color: #black;
+  font-family: 'Inconsolata', monospace;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+.sideGlitch::before, .sideGlitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background: #e7e7e7 ;
+  color: black;
+  clip: rect(0, 900px, 0, 0);
+}
+.sideGlitch::before {
+  left: 700px;
+  /*text-shadow: 10px 0 #bfebf1;*/
+  animation: glitch-effect 1s infinite linear alternate-reverse;
+}
+.sideGlitch::after {
+  right: 30px;
+  /*text-shadow: -10px 0 #ffadd8;*/
+  animation: glitch-effect 1s infinite linear alternate-reverse;
+}
+
  .glitch {
   position: relative;
 
   margin: 35% auto;
-  color: #ddbff2;
+  /*color: lightslategray;*/
+  color: white;
   font-size: 10em;
-  font-family: "Exo", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
@@ -229,18 +312,18 @@ html {
   left: 0;
   right: 0;
   overflow: hidden;
-  background: #fff199 ;
-  color: #ddbff2;
+  background: black ;
+  color: white;
   clip: rect(0, 900px, 0, 0);
 }
 .glitch::before {
   left: 700px;
-  text-shadow: 10px 0 #bfebf1;
+  /*text-shadow: 10px 0 #bfebf1;*/
   animation: glitch-effect 1s infinite linear alternate-reverse;
 }
 .glitch::after {
   right: 30px;
-  text-shadow: -10px 0 #ffadd8;
+  /*text-shadow: -10px 0 #ffadd8;*/
   animation: glitch-effect 1s infinite linear alternate-reverse;
 }
 
@@ -390,15 +473,16 @@ html {
 
 #sidebar {
     position: fixed;
-    height: 100%;
-    width: 20%;
-    background-color: black;
+    height: 80%;
+    width: 40%;
+    background-color: #e7e7e7;
+    overflow: hidden;
+    /*z-index: -1;*/
 }
 
 #landing {
   position: fixed;
     height: 100%;
     width: 100%;
-    background-color: #fff199;
+    background-color: black;
     text-align: center;
-}
