@@ -17,6 +17,11 @@ ul {
   list-style-type: none;
 }
 
+img {
+ height: 100%;
+ width: 100%;
+}
+
 #backButton {
   margin-top: 10vh;
   margin-bottom: -10vh;
