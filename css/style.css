@@ -31,6 +31,10 @@ img {
  border: 1px solid black;   
 }
 
+.artBorder:hover {
+  opacity: 0.3;
+}
+
 
 .navbar-brand {
     text-align: center;
@@ -472,11 +476,6 @@ html {
 .glitch a:hover {
   color: #adffb6;
 }
-
-
-
-
-
 
 
 /*IDS*/
