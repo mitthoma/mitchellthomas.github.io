@@ -186,24 +186,30 @@ html {
 .workHeader {
   background: #e7e7e7;
   padding: 1em;
-  margin: 0 0 1.5em;
-  padding-left: 10vh;
+  margin: 0 0 3em;
+  /*padding-left: 10vh;*/
   height: 100%;
   width: 100%;
   text-align: center;
-  font-size: 6em;
+  /*font-size: 6em;*/
   margin-bottom: -2%;
+  text-decoration: line-through;
+  text-decoration-color: white;
+}
+
+.workHeader h1 {
+  font-size: 4.5em;
 }
 
 .workItem {
-  background-color: #e1e1e1;
+  background-color: #333333;
   padding: 1em;
-  margin: 0 0 1.5em;
-  padding-left: 10vh;
+  margin: 0 0 3em;
+  /*padding-left: 10vh;*/
   height: 100%;
   width: 100%;
-  text-align: right;
-  color: inherit;
+  text-align: center;
+  color: white;
 }
 
 .workItem h1 {
@@ -213,6 +219,11 @@ html {
 .workItem h1:hover {
   color: white;
   text-decoration: line-through;
+}
+
+.arrow {
+ float: left;
+
 }
 
 
