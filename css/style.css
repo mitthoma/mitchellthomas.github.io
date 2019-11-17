@@ -90,6 +90,12 @@ img {
   text-align: left;
 }
 
+@media only screen and (max-width: 600px) {
+  #title {
+    font-family: Arial;
+  }
+}
+
 
 img {
   height: auto;
