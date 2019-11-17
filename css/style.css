@@ -73,6 +73,11 @@ img {
     margin-left: 25%;
 }
 
+.tech_specs {
+  background-color:#333333 ;
+  color: white;
+}
+
 #title {
   position: relative;
   /*margin: 60% auto;*/
