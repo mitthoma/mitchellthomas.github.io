@@ -4,13 +4,21 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+body, html {
+  cursor: url('https://img.icons8.com/ios/30/000000/source-code.png'), pointer;
+}
+
+
+
 a {
   color: inherit;
 }
 
 a:hover {
-  color: white;
+  color: inherit;
   text-decoration: line-through;
+  text-decoration-color: white;
+  cursor: url('https://img.icons8.com/ios/30/000000/source-code.png'), pointer;
 }
 
 ul {
@@ -32,7 +40,9 @@ img {
 }
 
 .artBorder:hover {
-  opacity: 0.3;
+  opacity: 0.4;
+  transition: ease-in 0.4s;
+  cursor: url('https://img.icons8.com/ios/30/000000/source-code.png'), pointer;
 }
 
 
@@ -220,6 +230,7 @@ html {
 .workItem h1:hover {
   color: white;
   text-decoration: line-through;
+  cursor: url('https://img.icons8.com/ios/30/000000/source-code.png'), pointer;
 }
 
 .arrow {
@@ -487,6 +498,7 @@ html {
 
 .glitch a:hover {
   color: #adffb6;
+  cursor: url('https://img.icons8.com/ios/30/000000/source-code.png'), pointer;
 }
 
 
@@ -521,4 +533,3 @@ html {
 .landingText {
   color: white;
 }
-
