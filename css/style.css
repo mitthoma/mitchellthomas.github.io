@@ -540,6 +540,7 @@ html {
 
 #landing_page_body {
   background-color: black;
+  cursor: default;
 }
 
 #audioItem {
