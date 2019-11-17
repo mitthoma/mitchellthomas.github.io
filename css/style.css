@@ -78,6 +78,11 @@ img {
   color: white;
 }
 
+.tech_specs:hover {
+  background-color: white;
+  color: #333333;
+}
+
 #title {
   position: relative;
   /*margin: 60% auto;*/
